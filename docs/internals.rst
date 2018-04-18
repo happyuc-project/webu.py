@@ -75,7 +75,7 @@ Providers
 ---------
 
 A provider is responsible for all direct blockchain interactions.  In most
-cases this means interacting with the JSON-RPC server for an ethereum node over
+cases this means interacting with the JSON-RPC server for an happyuc node over
 HTTP or an IPC socket.  There is however nothing which requires providers to be
 RPC based, allowing for providers designed for testing purposes which use an
 in-memory EVM to fulfill requests.
@@ -113,7 +113,7 @@ setting the middlewares the provider should use.
 
 .. py:method:: BaseProvider.isConnected()
 
-    This function should return ``True`` or ``False`` depending on whether the
+    This function should return ``True`` or ``False`` depending on whhuc the
     provider should be considered *connected*.  For example, an IPC socket
     based provider should return ``True`` if the socket is open and ``False``
     if the socket is closed.

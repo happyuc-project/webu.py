@@ -3,7 +3,7 @@ import json
 import pytest
 
 from eth_tester import (
-    EthereumTester,
+    HappyUCTester,
 )
 
 from ens import ENS
@@ -26,7 +26,7 @@ from webu.contract import (
     Contract,
 )
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 
 
@@ -97,7 +97,7 @@ def ETHRegistrarFactory(w3):
 # session scope for performance
 @pytest.fixture(scope="session")
 def ens_setup():
-    w3 = Webu(EthereumTesterProvider(EthereumTester()))
+    w3 = Webu(HappyUCTesterProvider(HappyUCTester()))
 
     # ** Set up ENS contracts **
 

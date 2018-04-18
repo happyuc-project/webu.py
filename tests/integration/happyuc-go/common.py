@@ -18,12 +18,12 @@ def get_open_port():
     return str(port)
 
 
-class GoEthereumTest(WebuModuleTest):
+class HappyUCGoTest(WebuModuleTest):
     def _check_webu_clientVersion(self, client_version):
         assert client_version.startswith('Ghuc/')
 
 
-class GoEthereumEthModuleTest(EthModuleTest):
+class HappyUCGoEthModuleTest(EthModuleTest):
     def test_eth_replaceTransaction(self, webu, unlocked_account):
         pytest.xfail('Needs ability to efficiently control mining')
         super().test_eth_replaceTransaction(webu, unlocked_account)
@@ -61,13 +61,13 @@ class GoEthereumEthModuleTest(EthModuleTest):
         super().test_eth_modifyTransaction(webu, unlocked_account)
 
 
-class GoEthereumVersionModuleTest(VersionModuleTest):
+class HappyUCGoVersionModuleTest(VersionModuleTest):
     pass
 
 
-class GoEthereumNetModuleTest(NetModuleTest):
+class HappyUCGoNetModuleTest(NetModuleTest):
     pass
 
 
-class GoEthereumPersonalModuleTest(PersonalModuleTest):
+class HappyUCGoPersonalModuleTest(PersonalModuleTest):
     pass

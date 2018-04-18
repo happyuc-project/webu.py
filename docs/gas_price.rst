@@ -3,7 +3,7 @@
 Gas Price API
 ===============
 
-For Ethereum transactions, gas price is a delicate property. For this reason,
+For HappyUC transactions, gas price is a delicate property. For this reason,
 Webu includes an API for configuring it.
 
 By default, Webu will not include a ``gasPrice`` in the transaction as to relay
@@ -38,14 +38,14 @@ The method must return a positive integer representing the gas price in wei.
 
 To demonstrate, here is a rudimentary example of a gas price strategy that
 returns a higher gas price when the value of the transaction is higher than
-1 Ether.
+1 Huc.
 
 .. code-block:: python
 
     from webu import Webu
 
     def value_based_gas_price_strategy(webu, transaction_params):
-        if transaction_params['value'] > Webu.toWei(1, 'ether'):
+        if transaction_params['value'] > Webu.toWei(1, 'huc'):
             return Webu.toWei(20, 'gwei')
         else:
             return Webu.toWei(5, 'gwei')
@@ -74,7 +74,7 @@ Available gas price strategies
 
     Makes a call to the `JSON-RPC eth_gasPrice
     method <https://github.com/happyuc-project/wiki/wiki/JSON-RPC#eth_gasprice>`_ which returns
-    the gas price configured by the connected Ethereum node.
+    the gas price configured by the connected HappyUC node.
 
 .. py:module:: webu.gas_strategies.time_based
 

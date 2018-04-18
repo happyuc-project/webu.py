@@ -1,7 +1,7 @@
-Ethereum Name Service
+HappyUC Name Service
 ================================
 
-The Ethereum Name Service is analogous to the Domain Name Service. It
+The HappyUC Name Service is analogous to the Domain Name Service. It
 enables users and developers to use human-friendly names in place of error-prone
 hexadecimal addresses, content hashes, and more.
 

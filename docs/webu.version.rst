@@ -49,13 +49,13 @@ The following properties are available on the ``webu.eth`` namespace.
         1
 
 
-.. py:method:: Version.ethereum(self)
+.. py:method:: Version.happyuc(self)
 
     * Delegates to ``eth_protocolVersion`` RPC Method
 
-    Returns the current ethereum protocol version.
+    Returns the current happyuc protocol version.
 
     .. code-block:: python
 
-        >>> webu.version.ethereum
+        >>> webu.version.happyuc
         63

@@ -1,7 +1,7 @@
 Webu.py
 =======
 
-Webu.py is a python library for interacting with Ethereum.  It's API is derived
+Webu.py is a python library for interacting with HappyUC.  It's API is derived
 from the `Webu.js`_ Javascript API and should be familiar to anyone who has
 used ``webu.js``.
 

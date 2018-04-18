@@ -73,7 +73,7 @@ Hosted Private Key
 .. WARNING::
   It is unnacceptable for a hosted node to offer hosted private keys. It
   gives other people complete control over your account. "Not your keys,
-  not your Ether" in the wise words of Andreas Antonopoulos.
+  not your Huc" in the wise words of Andreas Antonopoulos.
 
 Some Common Uses for Local Private Keys
 -------------------------------------------
@@ -97,7 +97,7 @@ Extract private key from ghuc keyfile
 
 .. code-block:: python
 
-    with open('~/.ethereum/keystore/UTC--...--5ce9454909639D2D17A3F753ce7d93fa0b9aB12E') as keyfile:
+    with open('~/.happyuc/keystore/UTC--...--5ce9454909639D2D17A3F753ce7d93fa0b9aB12E') as keyfile:
         encrypted_key = keyfile.read()
         private_key = w3.eth.account.decrypt(encrypted_key, 'correcthorsebatterystaple')
         # tip: do not save the key or password anywhere, especially into a shared source file
@@ -222,7 +222,7 @@ this will prepare it for Solidity:
 Verify a message with ecrecover in Solidity
 ---------------------------------------------
 
-Create a simple ecrecover contract in `Remix <https://remix.ethereum.org/>`_:
+Create a simple ecrecover contract in `Remix <https://remix.happyuc.org/>`_:
 
 .. code-block:: none
 

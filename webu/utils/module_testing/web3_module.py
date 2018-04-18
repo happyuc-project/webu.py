@@ -22,7 +22,7 @@ class WebuModuleTest:
         raise NotImplementedError("Must be implemented by subclasses")
 
     # Contract that calculated test values can be found at
-    # https://kovan.etherscan.io/address/0xb9be06f5b99372cf9afbccadbbb9954ccaf7f4bb#code
+    # https://kovan.hucscan.io/address/0xb9be06f5b99372cf9afbccadbbb9954ccaf7f4bb#code
     @pytest.mark.parametrize(
         'types,values,expected',
         (

@@ -96,7 +96,7 @@ ethtestrpc_exception_middleware = construct_exception_handler_middleware(
 )
 
 
-def ethereum_tester_personal_remapper_middleware(make_request, webu):
+def happyuctester_personal_remapper_middleware(make_request, webu):
     def middleware(method, params):
         if method == 'personal_sendTransaction':
             return make_request('personal_signAndSendTransaction', params)
@@ -105,15 +105,15 @@ def ethereum_tester_personal_remapper_middleware(make_request, webu):
     return middleware
 
 
-class EthereumTesterProvider(BaseProvider):
+class HappyUCTesterProvider(BaseProvider):
     middlewares = [
         ethtestrpc_middleware,
         ethtestrpc_string_middleware,
         ethtestrpc_exception_middleware,
-        ethereum_tester_personal_remapper_middleware,
+        happyuctester_personal_remapper_middleware,
     ]
 
-    @deprecated_for("webu.providers.eth_tester.EthereumTesterProvider")
+    @deprecated_for("webu.providers.eth_tester.HappyUCTesterProvider")
     def __init__(self,
                  *args,
                  **kwargs):
@@ -125,7 +125,7 @@ class EthereumTesterProvider(BaseProvider):
         super(BaseProvider, self).__init__(*args, **kwargs)
 
     def __str__(self):
-        return "EthereumTesterProvider"
+        return "HappyUCTesterProvider"
 
     def __repr__(self):
         return self.__str__()
@@ -145,7 +145,7 @@ class EthereumTesterProvider(BaseProvider):
 class TestRPCProvider(HTTPProvider):
     middlewares = [ethtestrpc_middleware, ethtestrpc_exception_middleware]
 
-    @deprecated_for("webu.providers.eth_tester.EthereumTesterProvider")
+    @deprecated_for("webu.providers.eth_tester.HappyUCTesterProvider")
     def __init__(self, host="127.0.0.1", port=8545, *args, **kwargs):
         if not is_testrpc_available():
             raise Exception("`TestRPCProvider` requires the `eth-testrpc` package to be installed")

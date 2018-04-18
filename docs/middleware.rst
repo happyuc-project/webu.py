@@ -2,7 +2,7 @@ Middleware
 ==========
 
 Webu manages layers of middlewares by default. They sit between the public Webu methods and the
-:doc:`providers`, which handle native communication with the Ethereum client. Each layer
+:doc:`providers`, which handle native communication with the HappyUC client. Each layer
 can modify the request and/or response. Some middlewares are enabled by default, and
 others are available for optional use.
 
@@ -36,7 +36,7 @@ AttributeDict
 
 .. py:method:: webu.middleware.name_to_address_middleware
 
-    This middleware converts Ethereum Name Service (ENS) names into the
+    This middleware converts HappyUC Name Service (ENS) names into the
     address that the name points to. For example :meth:`~webu.Eth.sendTransaction` will
     accept .eth names in the 'from' and 'to' fields.
 
@@ -81,7 +81,7 @@ Middleware Order
 ~~~~~~~~~~~~~~~~~~
 
 Think of the middleware as being layered in an onion, where you initiate a webu.py request at
-the outermost layer of the onion, and the Ethereum node (like ghuc or parity) receives and responds
+the outermost layer of the onion, and the HappyUC node (like ghuc or parity) receives and responds
 to the request inside the innermost layer of the onion. Here is a (simplified) diagram:
 
 .. code-block:: none
@@ -110,7 +110,7 @@ to the request inside the innermost layer of the onion. Here is a (simplified) d
               .         .            ``              |              .            ``          .
              ``         .            .               v               .            .          .
              .         .`           .                                .            .          ``
-             .         .            .          Ethereum node         .`           .           .
+             .         .            .          HappyUC node         .`           .           .
              .         .            .                                .            .           .
              .         ``           `.               |               .            .           .
              .          .            .`              |              .`            .          .
@@ -275,7 +275,7 @@ All of the caching middlewares accept these common arguments.
 
 * ``cache_class`` must be a callable which returns an object which implements the dictionary API.
 * ``rpc_whitelist`` must be an iterable, preferably a set, of the RPC methods that may be cached.
-* ``should_cache_fn`` must be a callable with the signature ``fn(method, params, response)`` which returns whether the response should be cached.
+* ``should_cache_fn`` must be a callable with the signature ``fn(method, params, response)`` which returns whhuc the response should be cached.
 
 
 .. py:method:: webu.middleware.construct_simple_cache_middleware(cache_class, rpc_whitelist, should_cache_fn)

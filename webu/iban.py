@@ -105,7 +105,7 @@ class Iban:
     def fromAddress(address):
         """
         This method should be used to create
-        an iban object from ethereum address
+        an iban object from happyuc address
 
         @method fromAddress
         @param {String} address

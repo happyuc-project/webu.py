@@ -1,7 +1,7 @@
 import pytest
 
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.utils.threads import (
     Timeout,
@@ -10,8 +10,8 @@ from webu.utils.threads import (
 
 @pytest.fixture()
 def filter_id(webu):
-    if EthereumTesterProvider not in map(type, webu.providers):
-        webu.providers = EthereumTesterProvider()
+    if HappyUCTesterProvider not in map(type, webu.providers):
+        webu.providers = HappyUCTesterProvider()
 
     block_filter = webu.eth.filter("latest")
     return block_filter.filter_id

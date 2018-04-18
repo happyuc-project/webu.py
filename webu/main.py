@@ -31,7 +31,7 @@ from webu.providers.rpc import (
 )
 from webu.providers.tester import (
     TestRPCProvider,
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.providers.websocket import (
     WebsocketProvider
@@ -82,7 +82,7 @@ class Webu:
     HTTPProvider = HTTPProvider
     IPCProvider = IPCProvider
     TestRPCProvider = TestRPCProvider
-    EthereumTesterProvider = EthereumTesterProvider
+    HappyUCTesterProvider = HappyUCTesterProvider
     WebsocketProvider = WebsocketProvider
 
     # Managers

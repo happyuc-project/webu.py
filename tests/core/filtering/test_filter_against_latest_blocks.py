@@ -1,5 +1,5 @@
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.utils.threads import (
     Timeout,
@@ -7,8 +7,8 @@ from webu.utils.threads import (
 
 
 def test_sync_filter_against_latest_blocks(webu, sleep_interval, wait_for_block):
-    if EthereumTesterProvider not in map(type, webu.providers):
-        webu.providers = EthereumTesterProvider()
+    if HappyUCTesterProvider not in map(type, webu.providers):
+        webu.providers = HappyUCTesterProvider()
 
     txn_filter = webu.eth.filter("latest")
 

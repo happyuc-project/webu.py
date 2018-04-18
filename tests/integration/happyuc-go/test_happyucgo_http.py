@@ -3,11 +3,11 @@ import pytest
 from webu import Webu
 
 from .common import (
-    GoEthereumEthModuleTest,
-    GoEthereumNetModuleTest,
-    GoEthereumPersonalModuleTest,
-    GoEthereumTest,
-    GoEthereumVersionModuleTest,
+    HappyUCGoEthModuleTest,
+    HappyUCGoNetModuleTest,
+    HappyUCGoPersonalModuleTest,
+    HappyUCGoTest,
+    HappyUCGoVersionModuleTest,
     get_open_port,
 )
 from .utils import (
@@ -46,21 +46,21 @@ def webu(ghuc_process, endpoint_uri):
     return _webu
 
 
-class TestGoEthereumTest(GoEthereumTest):
+class TestHappyUCGoTest(HappyUCGoTest):
     pass
 
 
-class TestGoEthereumEthModuleTest(GoEthereumEthModuleTest):
+class TestHappyUCGoEthModuleTest(HappyUCGoEthModuleTest):
     pass
 
 
-class TestGoEthereumVersionModuleTest(GoEthereumVersionModuleTest):
+class TestHappyUCGoVersionModuleTest(HappyUCGoVersionModuleTest):
     pass
 
 
-class TestGoEthereumNetModuleTest(GoEthereumNetModuleTest):
+class TestHappyUCGoNetModuleTest(HappyUCGoNetModuleTest):
     pass
 
 
-class TestGoEthereumPersonalModuleTest(GoEthereumPersonalModuleTest):
+class TestHappyUCGoPersonalModuleTest(HappyUCGoPersonalModuleTest):
     pass

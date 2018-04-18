@@ -158,7 +158,7 @@ receipt_formatter = apply_formatters_to_dict(RECEIPT_FORMATTERS)
 
 transaction_params_transformer = compose(transaction_params_remapper, transaction_params_formatter)
 
-ethereum_tester_middleware = construct_formatting_middleware(
+happyuc_tester_middleware = construct_formatting_middleware(
     request_formatters={
         # Eth
         'eth_getBlockByNumber': apply_formatters_to_args(
@@ -255,7 +255,7 @@ ethereum_tester_middleware = construct_formatting_middleware(
 )
 
 
-ethereum_tester_fixture_middleware = construct_fixture_middleware({
+happyuc_tester_fixture_middleware = construct_fixture_middleware({
     # Eth
     'eth_protocolVersion': '63',
     'eth_hashrate': 0,

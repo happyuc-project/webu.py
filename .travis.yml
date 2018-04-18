@@ -12,22 +12,22 @@ matrix:
     #
     # happyuc-go-ipc v1.7.2
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-goethereum-ipc" GETH_VERSION=v1.7.2
+      env: TOX_POSARGS="-e py35-integration-happyuc-go-ipc" GETH_VERSION=v1.7.2
     # happyuc-go-http v1.7.2
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-goethereum-http" GETH_VERSION=v1.7.2
+      env: TOX_POSARGS="-e py35-integration-happyuc-go-http" GETH_VERSION=v1.7.2
     # happyuc-go-ws v1.7.2
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-goethereum-ws" GETH_VERSION=v1.7.2
+      env: TOX_POSARGS="-e py35-integration-happyuc-go-ws" GETH_VERSION=v1.7.2
     # happyuc-go-ipc v1.8.1
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-goethereum-ipc" GETH_VERSION=v1.8.1
+      env: TOX_POSARGS="-e py35-integration-happyuc-go-ipc" GETH_VERSION=v1.8.1
     # happyuc-go-http v1.8.1
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-goethereum-http" GETH_VERSION=v1.8.1
+      env: TOX_POSARGS="-e py35-integration-happyuc-go-http" GETH_VERSION=v1.8.1
     # happyuc-go-ws v1.8.1
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-goethereum-ws" GETH_VERSION=v1.8.1
+      env: TOX_POSARGS="-e py35-integration-happyuc-go-ws" GETH_VERSION=v1.8.1
     # parity-ipc
     - python: "3.5"
       env: TOX_POSARGS="-e py35-integration-parity-ipc" PARITY_VERSION=v1.8.8
@@ -43,33 +43,33 @@ matrix:
     # core
     - python: "3.5"
       env: TOX_POSARGS="-e py35-core"
-    # eth-tester-pyethereum16
+    # eth-tester-pyehappyuc16
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-ethtester" ETHEREUM_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEthereum16Backend
+      env: TOX_POSARGS="-e py35-integration-ethtester" HAPPYUC_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEhappyuc16Backend
     # eth-tester-pyevm
     - python: "3.5"
-      env: TOX_POSARGS="-e py35-integration-ethtester" ETHEREUM_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEVMBackend
+      env: TOX_POSARGS="-e py35-integration-ethtester" HAPPYUC_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEVMBackend
     #
     # Python 3.6 testing
     #
     # happyuc-go-ipc v1.7.2
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-goethereum-ipc" GETH_VERSION=v1.7.2
+      env: TOX_POSARGS="-e py36-integration-happyuc-go-ipc" GETH_VERSION=v1.7.2
     # happyuc-go-http v1.7.2
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-goethereum-http" GETH_VERSION=v1.7.2
+      env: TOX_POSARGS="-e py36-integration-happyuc-go-http" GETH_VERSION=v1.7.2
     # happyuc-go-ws v1.7.2
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-goethereum-ws" GETH_VERSION=v1.7.2
+      env: TOX_POSARGS="-e py36-integration-happyuc-go-ws" GETH_VERSION=v1.7.2
     # happyuc-go-ipc v1.8.1
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-goethereum-ipc" GETH_VERSION=v1.8.1
+      env: TOX_POSARGS="-e py36-integration-happyuc-go-ipc" GETH_VERSION=v1.8.1
     # happyuc-go-http v1.8.1
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-goethereum-http" GETH_VERSION=v1.8.1
+      env: TOX_POSARGS="-e py36-integration-happyuc-go-http" GETH_VERSION=v1.8.1
     # happyuc-go-ws v1.8.1
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-goethereum-ws" GETH_VERSION=v1.8.1
+      env: TOX_POSARGS="-e py36-integration-happyuc-go-ws" GETH_VERSION=v1.8.1
     # parity-ipc
     - python: "3.6"
       env: TOX_POSARGS="-e py36-integration-parity-ipc" PARITY_VERSION=v1.8.8
@@ -91,12 +91,12 @@ matrix:
     # core
     - python: "3.6"
       env: TOX_POSARGS="-e py36-core"
-    # eth-tester-pyethereum16
+    # eth-tester-pyehappyuc16
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-ethtester" ETHEREUM_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEthereum16Backend
+      env: TOX_POSARGS="-e py36-integration-ethtester" HAPPYUC_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEhappyuc16Backend
     # eth-tester-pyevm
     - python: "3.6"
-      env: TOX_POSARGS="-e py36-integration-ethtester" ETHEREUM_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEVMBackend
+      env: TOX_POSARGS="-e py36-integration-ethtester" HAPPYUC_TESTER_CHAIN_BACKEND=eth_tester.backends.PyEVMBackend
 cache:
   - pip: true
   - directories:

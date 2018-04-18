@@ -20,7 +20,7 @@ from webu import (
     Webu,
 )
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.utils.encoding import (
     to_bytes,
@@ -87,7 +87,7 @@ def acct(request, webu):
 
 @pytest.fixture()
 def w3():
-    return Webu(EthereumTesterProvider())
+    return Webu(HappyUCTesterProvider())
 
 
 def test_eth_account_create_variation(acct):

@@ -14,8 +14,8 @@ class Miner(Module):
     def setExtra(self, extra):
         return self.webu.manager.request_blocking("miner_setExtra", [extra])
 
-    def setEtherBase(self, etherbase):
-        return self.webu.manager.request_blocking("miner_setEtherbase", [etherbase])
+    def setCoinBase(self, coinbase):
+        return self.webu.manager.request_blocking("miner_setcoinbase", [coinbase])
 
     def setGasPrice(self, gas_price):
         return self.webu.manager.request_blocking(

@@ -26,7 +26,7 @@ from webu.utils.module_testing.math_contract import (
 )
 
 
-def generate_go_ethereum_fixture(destination_dir):
+def generate_go_happyuc_fixture(destination_dir):
     with contextlib.ExitStack() as stack:
         datadir = stack.enter_context(common.tempdir())
 
@@ -142,4 +142,4 @@ def setup_chain_state(webu):
 
 if __name__ == '__main__':
     fixture_dir = sys.argv[1]
-    generate_go_ethereum_fixture(fixture_dir)
+    generate_go_happyuc_fixture(fixture_dir)

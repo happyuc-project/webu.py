@@ -2,7 +2,7 @@ import pytest
 import time
 
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.utils.threads import (
     Timeout,
@@ -39,7 +39,7 @@ def sleep_interval():
 
 def is_all_testrpc_providers(providers):
     return all(
-        isinstance(provider, EthereumTesterProvider)
+        isinstance(provider, HappyUCTesterProvider)
         for provider
         in providers
     )
@@ -98,7 +98,7 @@ def wait_for_transaction():
 
 @pytest.fixture()
 def webu():
-    provider = EthereumTesterProvider()
+    provider = HappyUCTesterProvider()
     w3 = Webu(provider)
 
     # Delete this whole block after eth-account has passed security audit

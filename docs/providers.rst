@@ -7,13 +7,13 @@ The provider is how webu talks to the blockchain.  Providers take JSON-RPC
 requests and return the response.  This is normally done by submitting the
 request to an HTTP or IPC socket based server.
 
-If you are already happily connected to your Ethereum node, then you
+If you are already happily connected to your HappyUC node, then you
 can skip the rest of the Providers section.
 
 Automatic vs Manual Providers
 -----------------------------
 
-The ``Webu`` object will look for the Ethereum node in a few
+The ``Webu`` object will look for the HappyUC node in a few
 standard locations if no providers are specified. Auto-detection happens
 when you initialize like so:
 
@@ -61,7 +61,7 @@ Examples Using Automated Detection
 
 
     There are client specific APIs.  If you are writing client agnostic code, in some situations
-    you may want to know what ethereum implementation is connected, and proceed
+    you may want to know what happyuc implementation is connected, and proceed
     accordingly.
 
     The following retrieves the client enode endpoint verifying there is a connected provider:
@@ -133,19 +133,19 @@ IPCProvider
     .. code-block:: python
 
         >>> from webu import Webu
-        >>> webu = Webu(Webu.IPCProvider("~/Library/Ethereum/ghuc.ipc"))
+        >>> webu = Webu(Webu.IPCProvider("~/Library/HappyUC/ghuc.ipc"))
 
     If no ``ipc_path`` is specified, it will use the first IPC file
     it can find from this list:
 
     - On Linux:
 
-      - ``~/.ethereum/ghuc.ipc``
-      - ``~/.local/share/io.parity.ethereum/jsonrpc.ipc``
+      - ``~/.happyuc/ghuc.ipc``
+      - ``~/.local/share/io.parity.happyuc/jsonrpc.ipc``
     - On Mac OS:
 
-      - ``~/Library/Ethereum/ghuc.ipc``
-      - ``~/Library/Application Support/io.parity.ethereum/jsonrpc.ipc``
+      - ``~/Library/HappyUC/ghuc.ipc``
+      - ``~/Library/Application Support/io.parity.happyuc/jsonrpc.ipc``
     - On Windows:
 
       - ``\\\.\pipe\ghuc.ipc``
@@ -167,57 +167,57 @@ WebsocketProvider
 
 .. py:currentmodule:: webu.providers.eth_tester
 
-EthereumTesterProvider
+HappyUCTesterProvider
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning:: Experimental:  This provider is experimental. There are still significant gaps in
     functionality. However, it is the default replacement for
-    :class:`webu.providers.tester.EthereumTesterProvider`
+    :class:`webu.providers.tester.HappyUCTesterProvider`
     and is being actively developed and supported.
 
-.. py:class:: EthereumTesterProvider(eth_tester=None)
+.. py:class:: HappyUCTesterProvider(eth_tester=None)
 
     This provider integrates with the ``eth-tester`` library.  The
     ``eth_tester`` constructor argument should be an instance of the
-    :class:`~eth_tester.EthereumTester` class provided by the ``eth-tester``
+    :class:`~eth_tester.HappyUCTester` class provided by the ``eth-tester``
     library.  If you would like a custom eth-tester instance to test with,
     see the ``eth-tester`` library documentation for details.
 
     .. code-block:: python
 
-        >>> from webu import Webu, EthereumTesterProvider
-        >>> w3 = Webu(EthereumTesterProvider())
+        >>> from webu import Webu, HappyUCTesterProvider
+        >>> w3 = Webu(HappyUCTesterProvider())
 
 
 
-EthereumTesterProvider (legacy)
+HappyUCTesterProvider (legacy)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning:: Deprecated:  This provider is deprecated in favor of
-    :class:`~webu.providers.eth_tester.EthereumTesterProvider` and the newly created eth-tester.
+    :class:`~webu.providers.eth_tester.HappyUCTesterProvider` and the newly created eth-tester.
 
-.. py:class:: webu.providers.tester.EthereumTesterProvider()
+.. py:class:: webu.providers.tester.HappyUCTesterProvider()
 
     This provider can be used for testing.  It uses an ephemeral blockchain
-    backed by the ``ethereum.tester`` module.
+    backed by the ``happyuc.tester`` module.
 
     .. code-block:: python
 
         >>> from webu import Webu
-        >>> from webu.providers.tester import EthereumTesterProvider
-        >>> w3 = Webu(EthereumTesterProvider())
+        >>> from webu.providers.tester import HappyUCTesterProvider
+        >>> w3 = Webu(HappyUCTesterProvider())
 
 TestRPCProvider
 ~~~~~~~~~~~~~~~
 
 .. warning:: Deprecated:  This provider is deprecated in favor of
-    :class:`~webu.providers.eth_tester.EthereumTesterProvider` and the newly created eth-tester.
+    :class:`~webu.providers.eth_tester.HappyUCTesterProvider` and the newly created eth-tester.
 
 .. py:class:: TestRPCProvider()
 
     This provider can be used for testing.  It uses an ephemeral blockchain
-    backed by the ``ethereum.tester`` module.  This provider will be slower
-    than the ``EthereumTesterProvider`` since it uses an HTTP server for RPC
+    backed by the ``happyuc.tester`` module.  This provider will be slower
+    than the ``HappyUCTesterProvider`` since it uses an HTTP server for RPC
     interactions with.
 
 

@@ -15,7 +15,7 @@ example in :class:`ConciseContract` for specifying an alternate factory.
 .. py:class:: Contract(address)
 
     Contract provides a default interface for deploying and interacting with
-    Ethereum smart contracts.
+    HappyUC smart contracts.
 
     The address parameter can be a hex address or an ENS name, like ``mycontract.eth``.
 

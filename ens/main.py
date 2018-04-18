@@ -33,7 +33,7 @@ ENS_MAINNET_ADDR = '0x314159265dD8dbb310642f98f50C066173C1259b'
 
 class ENS:
     '''
-    Quick access to common Ethereum Name Service functions,
+    Quick access to common HappyUC Name Service functions,
     like getting the address for a name.
 
     Unless otherwise specified, all addresses are assumed to be a `str` in
@@ -49,7 +49,7 @@ class ENS:
 
     def __init__(self, providers=default, addr=None):
         '''
-        :param providers: a list or single provider used to connect to Ethereum
+        :param providers: a list or single provider used to connect to HappyUC
         :type providers: instance of `webu.providers.base.BaseProvider`
         :param hex-string addr: the address of the ENS registry on-chain. If not provided,
             ENS.py will default to the mainnet ENS registry address.
@@ -73,7 +73,7 @@ class ENS:
 
     def address(self, name, guess_tld=True):
         '''
-        Look up the Ethereum address that `name` currently points to.
+        Look up the HappyUC address that `name` currently points to.
 
         :param str name: an ENS name to look up
         :param bool guess_tld: should `name` be appended with '.eth' if no common TLD found?

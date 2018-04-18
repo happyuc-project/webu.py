@@ -29,7 +29,7 @@ UNKNOWN_HASH = '0xdeadbeef000000000000000000000000000000000000000000000000000000
 
 class EthModuleTest:
     def test_eth_protocolVersion(self, webu):
-        protocol_version = webu.version.ethereum
+        protocol_version = webu.version.happyuc
 
         assert is_string(protocol_version)
         assert protocol_version.isdigit()

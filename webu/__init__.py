@@ -10,7 +10,7 @@ from webu.providers.rpc import (  # noqa: E402
     HTTPProvider,
 )
 from webu.providers.eth_tester import (  # noqa: E402
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.providers.tester import (  # noqa: E402
     TestRPCProvider,
@@ -31,6 +31,6 @@ __all__ = [
     "IPCProvider",
     "WebsocketProvider",
     "TestRPCProvider",
-    "EthereumTesterProvider",
+    "HappyUCTesterProvider",
     "Account",
 ]

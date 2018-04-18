@@ -49,8 +49,8 @@ Released Mar 27, 2018
   - eth-utils
   - hexbytes
   - *not included: eth-tester and eth-account*
-- Switch the default EthereumTesterProvider backend from eth-testrpc to eth-tester:
-  :class:`webu.providers.eth_tester.EthereumTesterProvider`
+- Switch the default HappyUCTesterProvider backend from eth-testrpc to eth-tester:
+  :class:`webu.providers.eth_tester.HappyUCTesterProvider`
 - A lot of documentation improvements
 - Test node integrations over a variety of providers
 - ghuc 1.8 test suite
@@ -139,9 +139,9 @@ Released Jan 18, 2018
 - New caching middleware that can cache based on time, block, or indefinitely.
 - Automatically retry JSON-RPC requests over HTTP, a few times.
 - ConciseContract now has the address directly
-- Many eth-tester fixes. :class:`webu.providers.eth_tester.main.EthereumTesterProvider` is now a
-  legitimate alternative to :class:`webu.providers.tester.EthereumTesterProvider`.
-- ethtest-rpc removed from testing. Tests use eth-tester only, on pyethereum. Soon it will be
+- Many eth-tester fixes. :class:`webu.providers.eth_tester.main.HappyUCTesterProvider` is now a
+  legitimate alternative to :class:`webu.providers.tester.HappyUCTesterProvider`.
+- ethtest-rpc removed from testing. Tests use eth-tester only, on pyhappyuc. Soon it will be
   eth-tester with py-evm.
 - Bumped several dependencies, like eth-tester
 - Documentation updates
@@ -151,7 +151,7 @@ v4.0.0-beta.5
 
 Released Dec 28, 2017
 
-* Improvements to working with eth-tester, using :class:`~webu.providers.eth_tester.EthereumTesterProvider`:
+* Improvements to working with eth-tester, using :class:`~webu.providers.eth_tester.HappyUCTesterProvider`:
 
   * Bugfix the key names in event logging
   * Add support for :meth:`~webu.eth.Eth.sendRawTransaction`
@@ -231,7 +231,7 @@ v4.0.0-beta.1
 3.16.1
 ------
 
-* Addition of ``ethereum-tester`` as a dependency
+* Addition of ``happyuc-tester`` as a dependency
 
 
 3.16.0
@@ -246,8 +246,8 @@ v4.0.0-beta.1
 ------
 
 * Change docs to use RTD theme
-* Experimental new ``EthereumTesterProvider`` for the ``ethereum-tester`` library.
-* Bugfix for ``function`` type abi encoding via ``ethereum-abi-utils`` upgrade to ``v0.4.1``
+* Experimental new ``HappyUCTesterProvider`` for the ``happyuc-tester`` library.
+* Bugfix for ``function`` type abi encoding via ``happyuc-abi-utils`` upgrade to ``v0.4.1``
 * Bugfix for ``Webu.toHex`` to conform to RPC spec.
 
 
@@ -370,12 +370,12 @@ v4.0.0-beta.1
 -----
 
 * Fix error message from contract factory creation.
-* Use ``ethereum-utils`` for utility functions.
+* Use ``happyuc-utils`` for utility functions.
 
 3.6.1
 -----
 
-* Upgrade ``ethereum-abi-utils`` dependency for upstream bugfix.
+* Upgrade ``happyuc-abi-utils`` dependency for upstream bugfix.
 
 3.6.0
 -----
@@ -441,7 +441,7 @@ v4.0.0-beta.1
 3.3.0
 -----
 
-* New ``EthereumTesterProvider`` now available.  Faster test runs than ``TestRPCProvider``
+* New ``HappyUCTesterProvider`` now available.  Faster test runs than ``TestRPCProvider``
 * Updated underlying eth-testrpc requirement.
 
 3.2.0
@@ -599,7 +599,7 @@ v4.0.0-beta.1
 1.6.0
 -----
 
-* Downstream package upgrades for ``eth-testrpc`` and ``ethereum-tester-client`` to
+* Downstream package upgrades for ``eth-testrpc`` and ``happyuc-tester-client`` to
   handle configuration of the Homestead and DAO fork block numbers.
 
 1.5.0

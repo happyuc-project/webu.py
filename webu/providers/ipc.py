@@ -72,7 +72,7 @@ def get_default_ipc_path(testnet=False):
         ipc_path = os.path.expanduser(os.path.join(
             "~",
             "Library",
-            "Ethereum",
+            "HappyUC",
             testnet,
             "ghuc.ipc"
         ))
@@ -83,7 +83,7 @@ def get_default_ipc_path(testnet=False):
             "~",
             "Library",
             "Application Support",
-            "io.parity.ethereum",
+            "io.parity.happyuc",
             "jsonrpc.ipc"
         ))
         if os.path.exists(ipc_path):
@@ -92,7 +92,7 @@ def get_default_ipc_path(testnet=False):
     elif sys.platform.startswith('linux'):
         ipc_path = os.path.expanduser(os.path.join(
             "~",
-            ".ethereum",
+            ".happyuc",
             testnet,
             "ghuc.ipc"
         ))
@@ -103,7 +103,7 @@ def get_default_ipc_path(testnet=False):
             "~",
             ".local",
             "share",
-            "io.parity.ethereum",
+            "io.parity.happyuc",
             "jsonrpc.ipc"
         ))
         if os.path.exists(ipc_path):

@@ -4,27 +4,27 @@ from webu.providers import (
 
 from .middleware import (
     default_transaction_fields_middleware,
-    ethereum_tester_fixture_middleware,
-    ethereum_tester_middleware,
+    happyuc_tester_fixture_middleware,
+    happyuc_tester_middleware,
 )
 
 
-class EthereumTesterProvider(BaseProvider):
+class HappyUCTesterProvider(BaseProvider):
     middlewares = [
         default_transaction_fields_middleware,
-        ethereum_tester_fixture_middleware,
-        ethereum_tester_middleware,
+        happyuc_tester_fixture_middleware,
+        happyuc_tester_middleware,
     ]
-    ethereum_tester = None
+    happyuc_tester = None
     api_endpoints = None
 
-    def __init__(self, ethereum_tester=None, api_endpoints=None):
-        if ethereum_tester is None:
+    def __init__(self, happyuc_tester=None, api_endpoints=None):
+        if happyuc_tester is None:
             # do not import eth_tester until runtime, it is not a default dependency
-            from eth_tester import EthereumTester
-            self.ethereum_tester = EthereumTester()
+            from eth_tester import HappyUCTester
+            self.happyuc_tester = HappyUCTester()
         else:
-            self.ethereum_tester = ethereum_tester
+            self.happyuc_tester = happyuc_tester
 
         if api_endpoints is None:
             # do not import eth_tester derivatives until runtime, it is not a default dependency
@@ -43,7 +43,7 @@ class EthereumTesterProvider(BaseProvider):
             }
 
         try:
-            response = delegator(self.ethereum_tester, params)
+            response = delegator(self.happyuc_tester, params)
         except NotImplementedError:
             return {
                 "error": "RPC Endpoint has not been implemented: {0}".format(method),

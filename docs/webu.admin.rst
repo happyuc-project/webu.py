@@ -24,7 +24,7 @@ The following properties are available on the ``webu.admin`` namespace.
     .. code-block:: python
 
         >>> webu.admin.datadir
-        '/Users/piper/Library/Ethereum'
+        '/Users/piper/Library/HappyUC'
 
 
 .. py:attribute:: nodeInfo
@@ -137,7 +137,7 @@ The following methods are available on the ``webu.admin`` namespace.
 
     Starts the HTTP based JSON RPC API webserver on the specified ``host`` and
     ``port``, with the ``rpccorsdomain`` set to the provided ``cors`` value and
-    with the APIs specified by ``apis`` enabled.  Returns boolean as to whether
+    with the APIs specified by ``apis`` enabled.  Returns boolean as to whhuc
     the server was successfully started.
 
     .. code-block:: python
@@ -153,7 +153,7 @@ The following methods are available on the ``webu.admin`` namespace.
     Starts the Websocket based JSON RPC API webserver on the specified ``host``
     and ``port``, with the ``rpccorsdomain`` set to the provided ``cors`` value
     and with the APIs specified by ``apis`` enabled.  Returns boolean as to
-    whether the server was successfully started.
+    whhuc the server was successfully started.
 
     .. code-block:: python
 

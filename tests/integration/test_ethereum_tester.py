@@ -2,7 +2,7 @@ import functools
 import pytest
 
 from eth_tester import (
-    EthereumTester,
+    HappyUCTester,
 )
 from eth_utils import (
     is_checksum_address,
@@ -11,7 +11,7 @@ from eth_utils import (
 
 from webu import Webu
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 from webu.utils.module_testing import (
     EthModuleTest,
@@ -29,13 +29,13 @@ pytestmark = pytest.mark.filterwarnings("ignore:implicit cast from 'char *'")
 
 @pytest.fixture(scope="module")
 def eth_tester():
-    _eth_tester = EthereumTester()
+    _eth_tester = HappyUCTester()
     return _eth_tester
 
 
 @pytest.fixture(scope="module")
 def eth_tester_provider(eth_tester):
-    provider = EthereumTesterProvider(eth_tester)
+    provider = HappyUCTesterProvider(eth_tester)
     return provider
 
 
@@ -137,7 +137,7 @@ def unlockable_account(webu, unlockable_account_pw):
     webu.eth.sendTransaction({
         'from': webu.eth.coinbase,
         'to': account,
-        'value': webu.toWei(10, 'ether'),
+        'value': webu.toWei(10, 'huc'),
     })
     yield account
 
@@ -155,16 +155,16 @@ def funded_account_for_raw_txn(webu):
     webu.eth.sendTransaction({
         'from': webu.eth.coinbase,
         'to': account,
-        'value': webu.toWei(10, 'ether'),
+        'value': webu.toWei(10, 'huc'),
         'gas': 21000,
         'gas_price': 1,
     })
     return account
 
 
-class TestEthereumTesterWebuModule(WebuModuleTest):
+class TestHappyUCTesterWebuModule(WebuModuleTest):
     def _check_webu_clientVersion(self, client_version):
-        assert client_version.startswith('EthereumTester/')
+        assert client_version.startswith('HappyUCTester/')
 
 
 def not_implemented(method, exc_type=NotImplementedError):
@@ -189,7 +189,7 @@ def disable_auto_mine(func):
     return func_wrapper
 
 
-class TestEthereumTesterEthModule(EthModuleTest):
+class TestHappyUCTesterEthModule(EthModuleTest):
     test_eth_sign = not_implemented(EthModuleTest.test_eth_sign, ValueError)
 
     @disable_auto_mine
@@ -239,7 +239,7 @@ class TestEthereumTesterEthModule(EthModuleTest):
 
     @disable_auto_mine
     def test_eth_call_old_contract_state(self, eth_tester, webu, math_contract, unlocked_account):
-        # For now, ethereum tester cannot give call results in the pending block.
+        # For now, happyuc tester cannot give call results in the pending block.
         # Once that feature is added, then delete the except/else blocks.
         try:
             super().test_eth_call_old_contract_state(webu, math_contract, unlocked_account)
@@ -252,15 +252,15 @@ class TestEthereumTesterEthModule(EthModuleTest):
             raise AssertionError("eth-tester was unexpectedly able to give the pending call result")
 
 
-class TestEthereumTesterVersionModule(VersionModuleTest):
+class TestHappyUCTesterVersionModule(VersionModuleTest):
     pass
 
 
-class TestEthereumTesterNetModule(NetModuleTest):
+class TestHappyUCTesterNetModule(NetModuleTest):
     pass
 
 
-class TestEthereumTesterPersonalModule(PersonalModuleTest):
+class TestHappyUCTesterPersonalModule(PersonalModuleTest):
     test_personal_sign_and_ecrecover = not_implemented(
         PersonalModuleTest.test_personal_sign_and_ecrecover,
         ValueError,

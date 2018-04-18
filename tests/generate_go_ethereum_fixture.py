@@ -63,13 +63,13 @@ GENESIS_DATA = {
     "coinbase": "0x3333333333333333333333333333333333333333",
     "alloc": {
         remove_0x_prefix(COINBASE): {
-            'balance': str(to_wei(1000000000, 'ether')),
+            'balance': str(to_wei(1000000000, 'huc')),
         },
         remove_0x_prefix(RAW_TXN_ACCOUNT): {
-            'balance': str(to_wei(10, 'ether')),
+            'balance': str(to_wei(10, 'huc')),
         },
         remove_0x_prefix(UNLOCKABLE_ACCOUNT): {
-            'balance': str(to_wei(10, 'ether')),
+            'balance': str(to_wei(10, 'huc')),
         },
     },
     "config": {
@@ -197,7 +197,7 @@ def get_ghuc_process(ghuc_binary,
         '--gcmode', 'archive',
         '--nodiscover',
         '--port', ghuc_port,
-        '--etherbase', COINBASE[2:],
+        '--coinbase', COINBASE[2:],
     )
 
     popen_proc = subprocess.Popen(
@@ -233,7 +233,7 @@ def write_config_json(config, datadir):
         config_file.write('\n')
 
 
-def generate_go_ethereum_fixture(destination_dir):
+def generate_go_happyuc_fixture(destination_dir):
     with contextlib.ExitStack() as stack:
         datadir = stack.enter_context(tempdir())
 
@@ -414,4 +414,4 @@ def setup_chain_state(webu):
 
 if __name__ == '__main__':
     fixture_dir = sys.argv[1]
-    generate_go_ethereum_fixture(fixture_dir)
+    generate_go_happyuc_fixture(fixture_dir)

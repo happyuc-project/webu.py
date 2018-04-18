@@ -45,7 +45,7 @@ setup(
     py_modules=['webu', 'ens'],
     license="MIT",
     zip_safe=False,
-    keywords='ethereum',
+    keywords='happyuc',
     packages=find_packages(exclude=["tests", "tests.*"]),
     classifiers=[
         'Development Status :: 4 - Beta',

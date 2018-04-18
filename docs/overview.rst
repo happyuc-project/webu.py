@@ -4,7 +4,7 @@ Overview
 .. contents:: :local:
 
 The common entrypoint for interacting with the Webu library is the ``Webu``
-object.  The webu object provides APIs for interacting with the ethereum
+object.  The webu object provides APIs for interacting with the happyuc
 blockchain, typically by connecting to a JSON-RPC server.
 
 
@@ -35,7 +35,7 @@ local development this would be something like ``ws://127.0.0.1:8546``.
 
     # Note that you should create only one RPCProvider per
     # process, as it recycles underlying TCP/IP network connections between
-    # your process and Ethereum node
+    # your process and HappyUC node
     >>> webu = Webu(HTTPProvider('http://localhost:8545'))
 
     # or for an IPC based connection
@@ -176,7 +176,7 @@ Currency Conversions
 
     .. code-block:: python
 
-        >>> Webu.toWei(1, 'ether')
+        >>> Webu.toWei(1, 'huc')
         1000000000000000000
 
 
@@ -188,7 +188,7 @@ Currency Conversions
 
     .. code-block:: python
 
-        >>> webu.fromWei(1000000000000000000, 'ether')
+        >>> webu.fromWei(1000000000000000000, 'huc')
         Decimal('1')
 
 
@@ -279,7 +279,7 @@ Cryptographic Hashing
         >>> Webu.soliditySha3(['address'], ["0x49eddd3769c0712032808d86597b84ac5c2f5614"])
         HexBytes("0x2ff37b5607484cd4eecf6d13292e22bd6e5401eaffcc07e279583bc742c68882")
 
-        >>> Webu.soliditySha3(['address'], ["ethereumfoundation.eth"])
+        >>> Webu.soliditySha3(['address'], ["happyucfoundation.eth"])
         HexBytes("0x913c99ea930c78868f1535d34cd705ab85929b2eaaf70fcd09677ecd6e5d75e9")
 
 Modules

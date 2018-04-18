@@ -168,7 +168,7 @@ def get_ghuc_process(ghuc_binary,
         '--nodiscover',
         '--port', port,
         '--networkid', networkid,
-        '--etherbase', COINBASE[2:],
+        '--coinbase', COINBASE[2:],
     )
     print(' '.join(run_ghuc_command))
     try:

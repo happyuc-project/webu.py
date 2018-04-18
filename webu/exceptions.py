@@ -35,7 +35,7 @@ class InvalidAddress(ValueError):
 
 class NameNotFound(ValueError):
     """
-    Raised when a caller provides an Ethereum Name Service name that
+    Raised when a caller provides an HappyUC Name Service name that
     does not resolve to an address.
     """
     pass

@@ -54,7 +54,7 @@ Use the ``auto`` module to guess at common node connection options.
 
 To peek under the hood, see: :ref:`automatic_provider_detection`
 
-This ``w3`` instance will now allow you to interact with the Ethereum
+This ``w3`` instance will now allow you to interact with the HappyUC
 blockchain.
 
 
@@ -63,7 +63,7 @@ Connecting to your Node
 
 Sometimes, webu cannot automatically detect where your node is.
 
-You can connect to your Ethereum node (for example: ghuc or parity) using one of
+You can connect to your HappyUC node (for example: ghuc or parity) using one of
 the available :ref:`providers`, typically IPC or HTTP.
 
 If your node is running locally, IPC will be faster and safer to expose.
@@ -92,7 +92,7 @@ HTTP Provider
 
     # Note that you should create only one HTTPProvider per
     # process, as it recycles underlying TCP/IP network connections between
-    # your process and Ethereum node
+    # your process and HappyUC node
     >>> w3 = Webu(HTTPProvider('http://192.168.1.2:8545'))
 
     >>> w3.eth.blockNumber

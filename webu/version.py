@@ -18,5 +18,5 @@ class Version(Module):
         return self.webu.manager.request_blocking("net_version", [])
 
     @property
-    def ethereum(self):
+    def happyuc(self):
         return self.webu.manager.request_blocking("eth_protocolVersion", [])

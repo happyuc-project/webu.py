@@ -309,7 +309,7 @@ class Contract:
     @combomethod
     def encodeABI(cls, fn_name, args=None, kwargs=None, data=None):
         """
-        Encodes the arguments using the Ethereum ABI for the contract function
+        Encodes the arguments using the HappyUC ABI for the contract function
         that matches the given name and arguments..
 
         :param data: defaults to function selector

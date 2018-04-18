@@ -104,7 +104,7 @@ def ghuc_fixture_data(ghuc_binary):
 @pytest.fixture(scope='module')
 def datadir(tmpdir_factory, ghuc_fixture_data):
     fixture_datadir = absolute_datadir(ghuc_fixture_data['datadir'])
-    base_dir = tmpdir_factory.mktemp('goethereum')
+    base_dir = tmpdir_factory.mktemp('happyuc-go')
     tmp_datadir = os.path.join(str(base_dir), 'datadir')
     shutil.copytree(fixture_datadir, tmp_datadir)
     return tmp_datadir

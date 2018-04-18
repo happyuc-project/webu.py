@@ -84,24 +84,24 @@ In v4, that same logic:
 The caller is responsible for polling the results from ``get_new_entries()``.
 See :ref:`asynchronous_filters` for examples of filter-event handling with webu v4.
 
-TestRPCProvider and EthereumTesterProvider
+TestRPCProvider and HappyUCTesterProvider
 ------------------------------------------------
 
 These providers are fairly uncommon. If you don't recognize the names,
 you can probably skip the section.
 
 However, if you were using webu.py for testing contracts,
-you might have been using TestRPCProvider or EthereumTesterProvider. 
+you might have been using TestRPCProvider or HappyUCTesterProvider. 
 
-In v4 there is a new :class:`EthereumTesterProvider`, and the old v3 implementation has been 
-removed. Webu.py v4 uses :class:`eth_tester.main.EthereumTester` under the hood, instead
+In v4 there is a new :class:`HappyUCTesterProvider`, and the old v3 implementation has been 
+removed. Webu.py v4 uses :class:`eth_tester.main.HappyUCTester` under the hood, instead
 of eth-testrpc. While ``eth-tester`` is still in beta, many parts are
 already in better shape than testrpc, so we decided to replace it in v4.
 
-If you were using TestRPC, or were explicitly importing EthereumTesterProvider, like:
-``from webu.providers.tester import EthereumTesterProvider``, then you will need to update.
+If you were using TestRPC, or were explicitly importing HappyUCTesterProvider, like:
+``from webu.providers.tester import HappyUCTesterProvider``, then you will need to update.
 
-With v4 you should import with ``from webu import EthereumTesterProvider``. As before, you'll 
+With v4 you should import with ``from webu import HappyUCTesterProvider``. As before, you'll 
 need to install Webu.py with the ``tester`` extra to get these features, like:
 
 .. code-block:: bash

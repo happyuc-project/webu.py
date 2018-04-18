@@ -261,7 +261,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Webu.py', u'Webu.py Documentation',
-   u'Piper Merriam', 'Webu.py', 'Backend agnostic Ethereum client interactions.',
+   u'Piper Merriam', 'Webu.py', 'Backend agnostic HappyUC client interactions.',
    'Miscellaneous'),
 ]
 

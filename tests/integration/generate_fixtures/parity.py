@@ -14,7 +14,7 @@ from eth_utils import (
 )
 
 import common
-import go_ethereum
+import go_happyuc
 from webu import Webu
 
 CHAIN_CONFIG = {
@@ -47,7 +47,7 @@ CHAIN_CONFIG = {
     },
     "genesis": {
         "seal": {
-            "ethereum": {
+            "happyuc": {
                 "nonce": "0x0000000000000042",
                 "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
             }
@@ -203,7 +203,7 @@ def generate_parity_fixture(destination_dir):
         # set up fixtures
         common.wait_for_socket(ghuc_ipc_path)
         webu_ghuc = Webu(Webu.IPCProvider(ghuc_ipc_path))
-        chain_data = go_ethereum.setup_chain_state(webu_ghuc)
+        chain_data = go_happyuc.setup_chain_state(webu_ghuc)
         fixture_block_count = webu_ghuc.eth.blockNumber
 
         datadir = stack.enter_context(common.tempdir())

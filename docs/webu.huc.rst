@@ -41,7 +41,7 @@ The following properties are available on the ``webu.eth`` namespace.
 
 .. py:attribute:: Eth.defaultAccount
 
-    The ethereum address that will be used as the default ``from`` address for
+    The happyuc address that will be used as the default ``from`` address for
     all transactions.
 
 
@@ -86,7 +86,7 @@ The following properties are available on the ``webu.eth`` namespace.
 
     * Delegates to ``eth_mining`` RPC Method
 
-    Returns boolean as to whether the node is currently mining.
+    Returns boolean as to whhuc the node is currently mining.
 
     .. code-block:: python
 
@@ -419,7 +419,7 @@ The following methods are available on the ``webu.eth`` namespace.
       transaction
     * ``data``: ``bytes or text`` - The compiled code of a contract OR the hash
       of the invoked method signature and encoded parameters. For details see
-      `Ethereum Contract ABI <https://github.com/happyuc-project/wiki/wiki/Ethereum-Contract-ABI>`_.
+      `HappyUC Contract ABI <https://github.com/happyuc-project/wiki/wiki/HappyUC-Contract-ABI>`_.
     * ``nonce``: ``integer`` - (optional) Integer of a nonce. This allows to
       overwrite your own pending transactions that use the same nonce.
 
@@ -446,7 +446,7 @@ The following methods are available on the ``webu.eth`` namespace.
     .. code-block:: python
 
         >>> import rlp
-        >>> from ethereum.transactions import Transaction
+        >>> from happyuc.transactions import Transaction
         >>> tx = Transaction(
             nonce=webu.eth.getTransactionCount(webu.eth.coinbase),
             gasprice=webu.eth.gasPrice,
@@ -737,7 +737,7 @@ with the filtering API.
     * Delegates to ``eth_uninstallFilter`` RPC Method.
 
     Uninstalls the filter specified by the given ``filter_id``.  Returns
-    boolean as to whether the filter was successfully uninstalled.
+    boolean as to whhuc the filter was successfully uninstalled.
 
     .. code-block:: python
 

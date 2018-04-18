@@ -1,8 +1,8 @@
 # Webu.py
 
-[![Join the chat at https://gitter.im/ethereum/webu.py](https://badges.gitter.im/ethereum/webu.py.svg)](https://gitter.im/ethereum/webu.py?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/happyuc/webu.py](https://badges.gitter.im/happyuc/webu.py.svg)](https://gitter.im/happyuc/webu.py?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Build Status](https://travis-ci.org/ethereum/webu.py.png)](https://travis-ci.org/ethereum/webu.py)
+[![Build Status](https://travis-ci.org/happyuc/webu.py.png)](https://travis-ci.org/happyuc/webu.py)
    
 
 A Python implementation of [webu.js](https://github.com/happyuc-project/webu.js)
@@ -83,7 +83,7 @@ sudo pacman -Sy libsecp256k1
 sudo dnf install openssl-devel libffi-devel autoconf automake libtool
 # ^ This is for Fedora.
 
-git clone git@github.com:ethereum/webu.py.git
+git clone git@github.com:happyuc/webu.py.git
 cd webu.py
 virtualenv venv
 . venv/bin/activate
@@ -119,7 +119,7 @@ This will build a Docker container set up with an environment to run the Python 
 To run the Python tests from your local machine:
 
 ```
-docker-compose exec sandbox bash -c 'pytest -n 4 -f -k "not goethereum"'
+docker-compose exec sandbox bash -c 'pytest -n 4 -f -k "not happyuc-go"'
 ```
 
 You can run arbitrary commands inside the Docker container by using the `bash -c` prefix.

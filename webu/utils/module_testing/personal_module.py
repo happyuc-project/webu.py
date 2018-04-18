@@ -53,7 +53,7 @@ class PersonalModuleTest:
                                       webu,
                                       unlockable_account,
                                       unlockable_account_pw):
-        assert webu.eth.getBalance(unlockable_account) > webu.toWei(1, 'ether')
+        assert webu.eth.getBalance(unlockable_account) > webu.toWei(1, 'huc')
         txn_params = {
             'from': unlockable_account,
             'to': unlockable_account,

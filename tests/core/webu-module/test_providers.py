@@ -3,12 +3,12 @@ from webu.providers.auto import (
     AutoProvider,
 )
 from webu.providers.eth_tester import (
-    EthereumTesterProvider,
+    HappyUCTesterProvider,
 )
 
 
 def test_set_providers(webu):
-    providers = [EthereumTesterProvider()]
+    providers = [HappyUCTesterProvider()]
 
     webu.providers = providers
 
@@ -16,7 +16,7 @@ def test_set_providers(webu):
 
 
 def test_set_providers_single(webu):
-    providers = [EthereumTesterProvider()]
+    providers = [HappyUCTesterProvider()]
 
     webu.providers = providers[0]
 

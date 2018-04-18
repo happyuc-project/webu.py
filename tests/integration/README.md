@@ -50,7 +50,7 @@ The address of an account which is *unlocked*.
 #### `funded_account_for_raw_txn`
 
 An account which has not sent any transactions (nonce of 0) which has enough
-ether for sending a single transaction.
+huc for sending a single transaction.
 
 
 #### `math_contract_deploy_txn_hash`
